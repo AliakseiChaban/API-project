@@ -263,7 +263,7 @@ def test_authorize_user_with_invalid_name(authorize_user_endpoint, name):
 
 
 @allure.feature("Authorization")
-@allure.story('Check token lifetime')
+@allure.story('Token lifetime')
 @pytest.mark.positive
 def test_token_lifetime(check_token_lifetime_endpoint, session_token_user_1):
     check_token_lifetime_endpoint.check_token_lifetime(session_token_user_1)
@@ -272,7 +272,7 @@ def test_token_lifetime(check_token_lifetime_endpoint, session_token_user_1):
 
 
 @allure.feature("Authorization")
-@allure.story('Check token lifetime')
+@allure.story('Token lifetime')
 @pytest.mark.negative
 def test_token_lifetime_with_fake_token(check_token_lifetime_endpoint, fake_token):
     check_token_lifetime_endpoint.check_token_lifetime(fake_token)
