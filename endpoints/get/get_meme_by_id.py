@@ -6,7 +6,7 @@ from endpoints.endpoint import Endpoint
 
 class GetMemeById(Endpoint):
 
-    @allure.step("Send request")
+    @allure.step("Send a 'GET meme' request")
     def get_meme_by_id(self, token, meme_id):
         self.response = requests.get(
             f"{self.url}/meme/{meme_id}",
